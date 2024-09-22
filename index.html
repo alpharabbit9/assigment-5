@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" data-theme = 'light'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChangeMakers</title>
+
+    <!-- ! tailwind and daisy UI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--* Font Family CDN -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+<style>
+    .font-inter{
+        font-family: "Inter", sans-serif;
+    }
+
+    .headerbg{
+        background-color: #F9F7F3;
+    }
+
+    .color1{
+        background-color: #B4F461;
+    }
+
+    #card-1{
+        background-image: url(./assets/noakhali.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #card-2{
+        background-image: url(./assets/feni.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #card-3{
+        background-image: url(./assets/quota-protest.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .btnBg{
+        border-radius: 8px;
+        background: rgba(17, 17, 17, 0.05);
+    }
+</style>
+</head>
+<body class="font-inter">
+    <!-- ! Header Starts -->
+
+    <header>
+
+        <!-- * Navbar starts -->
+         <nav class="headerbg mb-20 sticky">
+            <div class="navbar bg-base-100 w-11/12 mx-auto headerbg py-4 ">
+                <!-- ? Blog -->
+                <div class="navbar-start">
+                  <div>
+                    <button class="btn  w-28 h-11 rounded-xl color1 text-black">Blog</button>
+                  </div>
+                </div>
+                <!-- ?Title -->
+                <div class="navbar-center">
+                  <a class="btn btn-ghost text-xl font-extrabold"><img src="./assets/logo.png" alt="">Donate Bangladesh</a>
+                </div>
+                <!-- ?Budget -->
+                <div class="navbar-end">
+                 <div>
+                    <img src="./assets/coin.png" alt="">
+
+                 </div>
+                 <div>
+                    <span class="font-bold"> 5500</span> <span class="font-bold">BDT</span>
+
+                 </div>
+                 
+                </div>
+              </div>
+         </nav>
+        <!-- * Navbar Ends -->
+
+    </header>
+
+    <!-- ! Header Ends -->
+
+    <main class="w-10/12 mx-auto">
+        
+        <!-- * Button Section -->
+         <div class="mx-auto  flex justify-center gap-4 mb-12">
+            <button class="btn w-40 h-14 color1 text-black rounded-xl">Donation</button>
+            <button class="btn btn-active btn-ghost rounded-xl w-40 h-14">History</button>
+         </div>
+
+         <!-- * Section-1 || Card -1 -->
+
+         <section class="mb-16">
+            <!-- Parent Div -->
+             <div class="flex gap-12 border border-spacing-2 justify-between px-20 py-3 rounded-2xl">
+                <!-- Image div -->
+                 <div id="card-1" class="w-1/2 rounded-2xl p-4">
+                    
+                 </div>
+                 <!-- content Div -->
+                  <div class="w-1/2 mt-3 mb-3">
+                    <div class="flex gap-1 items-center text-sm font-normal p-2 btnBg w-28 h-11 text-center text-gray-600">
+                        <img src="./assets/coin.png" alt="">
+                        <span>0</span> <span>  BDT</span>
+                    </div>
+
+                    <span class="text-2xl font-bold mb-10 mt-2">Donate for Flood at Noakhali, Bangladesh</span>
+                    <p class="text-gray-400 my-6 mb-9 w-2/3  "> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this <disaster class="br"></disaster> Every contribution, big or small, makes  <difference class="br"></difference> Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                    <input class="border border-spacing-3 w-2/3 h-5 p-5 mb-9 rounded-2xl" type="text" placeholder="Write down the amount">
+                    <br>
+                    <button class="btn  w-2/3 h-14 color1 text-black rounded-2xl mb-7 font-extrabold">Donation Now</button>
+                    
+
+                  </div>
+             </div>
+        
+         </section>
+
+
+         <!-- * Section-1 Ends -->
+
+         <!-- * Section-2 || Card -2 -->
+
+         <section class="mb-16">
+            <!-- Parent Div -->
+             <div class="flex gap-12 border border-spacing-2 justify-between px-20 py-3 rounded-2xl">
+                <!-- Image div -->
+                 <div id="card-2" class="w-1/2 rounded-2xl p-4">
+                    
+                 </div>
+                 <!-- content Div -->
+                  <div class="w-1/2  mt-3 mb-3">
+                    <div class="flex gap-1 items-center text-sm font-normal p-2 btnBg w-28 h-11 text-center text-gray-600">
+                        <img src="./assets/coin.png" alt="">
+                        <span>600</span> <span>BDT</span>
+                    </div>
+
+                    <span class="text-2xl font-bold mb-10 mt-2">Donate for Flood Relief in Feni,Bangladesh</span>
+                    <p class="text-gray-400 my-6 mb-9 w-2/3  "> The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
+                    <input class="border border-spacing-3 w-2/3 h-5 p-5 mb-9 rounded-2xl" type="text" placeholder="Write down the amount">
+                    <br>
+                    <button class="btn  w-2/3 h-14 color1 text-black rounded-2xl mb-7 font-extrabold">Donation Now</button>
+                    
+
+                  </div>
+             </div>
+        
+         </section>
+         <!-- * Section-2 Ends -->
+
+
+          <!-- * Section-3 || Card -3 -->
+
+          <section class="mb-16">
+            <!-- Parent Div -->
+             <div class="flex gap-12 border border-spacing-2 justify-between px-20 py-3 rounded-2xl">
+                <!-- Image div -->
+                 <div id="card-3" class="w-1/2 rounded-2xl p-4">
+                    
+                 </div>
+                 <!-- content Div -->
+                  <div class="w-1/2  mt-3 mb-3">
+                    <div class="flex gap-1 items-center text-sm font-normal p-2 btnBg w-28 h-11 text-center text-gray-600">
+                        <img src="./assets/coin.png" alt="">
+                        <span>2600</span> <span>BDT</span>
+                    </div>
+
+                    <span class="text-2xl font-bold mb-10 mt-2">Aid for Injured in the Quota Movement</span>
+                    <p class="text-gray-400 my-6 mb-9 w-2/3  "> The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
+                    <input class="border border-spacing-3 w-2/3 h-5 p-5 mb-9 rounded-2xl" type="text" placeholder="Write down the amount">
+                    <br>
+                    <button class="btn  w-2/3 h-14 color1 text-black rounded-2xl mb-7 font-extrabold">Donation Now</button>
+                    
+
+                  </div>
+             </div>
+        
+         </section>
+         <!-- * Section-3 Ends -->
+
+
+
+
+        
+    </main>
+
+    
+</body>
+</html>
