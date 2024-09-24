@@ -15,6 +15,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
+<!-- font awsome cdn -->
+
+<script src="https://kit.fontawesome.com/8d8bc3536b.js" crossorigin="anonymous"></script>
+
 <style>
     .font-inter{
         font-family: "Inter", sans-serif;
@@ -59,16 +63,16 @@
 
         <!-- * Navbar starts -->
          <nav class="headerbg mb-20 ">
-            <div class="navbar bg-base-100 w-11/12 mx-auto headerbg py-4 sticky">
+            <div class="navbar bg-base-100 w-11/12 mx-auto headerbg py-4 sticky top-0 z-[1000] backdrop-filter backdrop-blur-lg bg-opacity-30 border-b border-gray-200">
                 <!-- ? Blog -->
                 <div class="navbar-start">
                   <div>
-                    <button id="btnBlog" class="btn  w-28 h-11 rounded-xl color1 text-black">Blog</button>
+                    <button id="btnBlog" class="btn w-20 h-8 lg:w-28 lg:h-11 rounded-xl color1 text-black">Blog</button>
                   </div>
                 </div>
                 <!-- ?Title -->
-                <div class="navbar-center">
-                  <a class="btn btn-ghost text-xl font-extrabold"><img src="./assets/logo.png" alt="">Donate Bangladesh</a>
+                <div class="navbar-center hidden lg:flex">
+                  <a class="btn btn-ghost text-sm lg:text-xl font-bold lg:font-extrabold"><img src="./assets/logo.png" alt="">Changemakers</a>
                 </div>
                 <!-- ?Budget -->
                 <div class="navbar-end">
@@ -77,7 +81,7 @@
 
                  </div>
                  <div>
-                    <span id="total-budget" class="font-bold"> 5500</span> <span class="font-bold">BDT</span>
+                    <span id="total-budget" class="font-bold "> 5500</span> <span class="font-bold">BDT</span>
 
                  </div>
                  
@@ -94,31 +98,51 @@
         
         <!-- * Button Section -->
          <div class="mx-auto  flex justify-center gap-4 mb-12">
-            <button class="btn w-40 h-14 color1 text-black rounded-xl">Donation</button>
-            <button class="btn btn-active btn-ghost rounded-xl w-40 h-14">History</button>
+            <button id="show-donation-page" class="btn w-40 h-14 color1 text-black rounded-xl">Donation</button>
+            <button id="show-history-page" class="btn btn-active btn-ghost rounded-xl w-40 h-14">History</button>
          </div>
 
-         <!-- * Section-1 || Card -1 -->
+         <section id="donation-section">
+            <!-- * Section-1 || Card -1 -->
 
-         <section class="mb-16">
+         <section class="mb-16 donation-page">
             <!-- Parent Div -->
-             <div class="flex gap-12 border border-spacing-2 justify-between px-20 py-3 rounded-2xl">
+             <div class="lg:flex gap-5 lg:gap-12 border border-spacing-2 justify-between px-5 lg:px-20 py-3 rounded-2xl">
                 <!-- Image div -->
-                 <div id="card-1" class="w-1/2 rounded-2xl p-4">
-                    
+                 <div  class=" w-full lg:w-1/2 sm:h-52 lg:h-full  rounded-2xl p-4">
+                    <img class="w-full" src="./assets/noakhali.png" alt="">
                  </div>
                  <!-- content Div -->
-                  <div class="w-1/2 mt-3 mb-3">
-                    <div class="flex gap-1 items-center text-sm font-normal p-2 btnBg w-28 h-11 text-center text-gray-600">
+                  <div class=" w-full lg:w-1/2 mt-3 mb-3">
+                    <div class="flex gap-1 items-center text-sm font-normal p-2 btnBg w-28 h-11 text-center text-gray-600 mb-4">
                         <img src="./assets/coin.png" alt="">
                         <span id="fundAmount">600</span> <span>  BDT</span>
                     </div>
 
-                    <span class="text-2xl font-bold mb-10 mt-2">Donate for Flood at Noakhali, Bangladesh</span>
-                    <p class="text-gray-400 my-6 mb-9 w-2/3  "> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this <disaster class="br"></disaster> Every contribution, big or small, makes  <difference class="br"></difference> Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                    <span class="text-lg lg:text-2xl font-bold mb-10 mt-2">Donate for Flood at Noakhali, Bangladesh</span>
+                    <p class="text-gray-400 my-6 mb-9  lg:w-2/3  "> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this <disaster class="br"></disaster> Every contribution, big or small, makes  <difference class="br"></difference> Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
                     <input id="floodAmount" class="border border-spacing-3 w-2/3 h-5 p-5 mb-9 rounded-2xl" type="text" placeholder="Write down the amount">
                     <br>
                     <button id="btn-flood" class="btn  w-2/3 h-14 color1 text-black rounded-2xl mb-7 font-extrabold">Donation Now</button>
+                    <!--Invalid  modals structure -->
+
+                    <dialog id="my_modal_1" class="modal text-center">
+                        <div class="modal-box">
+                        <h3 class="text-2xl font-extrabold text-center mb-2">Congrats!</h3>
+                        <img class="mx-auto w-1/4" src="./assets/coin.png" alt="">  
+                        <p>You have donated for humankind <br> <span class="font-bold">succesfully</span></p>
+                          
+                          
+                          <div class="modal-action">
+                            <form method="dialog">
+                              <!-- Close modal button -->
+                              <button class="btn mx-auto">Close Confirmation</button>
+                            </form>
+                          </div>
+                        </div>
+                      </dialog>
+
+                     
                     
 
                   </div>
@@ -131,25 +155,43 @@
 
          <!-- * Section-2 || Card -2 -->
 
-         <section class="mb-16">
+         <section class="mb-16 donation-page">
             <!-- Parent Div -->
-             <div class="flex gap-12 border border-spacing-2 justify-between px-20 py-3 rounded-2xl">
+             <div class="lg:flex gap-5 lg:gap-12 border border-spacing-2 justify-between px-5 lg:px-20 py-3 rounded-2xl">
                 <!-- Image div -->
-                 <div id="card-2" class="w-1/2 rounded-2xl p-4">
-                    
+                 <div  class="w-full lg:w-1/2 sm:h-52 lg:h-96   rounded-2xl p-4">
+                    <img class="w-full" src="./assets/feni.png" alt="">
                  </div>
                  <!-- content Div -->
-                  <div class="w-1/2  mt-3 mb-3">
+                  <div class="w-full lg:w-1/2 mt-3 mb-3">
                     <div class="flex gap-1 items-center text-sm font-normal p-2 btnBg w-28 h-11 text-center text-gray-600">
                         <img src="./assets/coin.png" alt="">
                         <span id="feniFund">600</span> <span>BDT</span>
                     </div>
 
-                    <span class="text-2xl font-bold mb-10 mt-2">Donate for Flood Relief in Feni,Bangladesh</span>
-                    <p class="text-gray-400 my-6 mb-9 w-2/3  "> The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
+                    <span class="text-lg lg:text-2xl font-bold mb-10 mt-2">Donate for Flood Relief in Feni,Bangladesh</span>
+                    <p class="text-gray-400 my-6 mb-9  lg:w-2/3   "> The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
                     <input id="inputFeni" class="border border-spacing-3 w-2/3 h-5 p-5 mb-9 rounded-2xl" type="text" placeholder="Write down the amount">
                     <br>
                     <button id="btn-feni" class="btn  w-2/3 h-14 color1 text-black rounded-2xl mb-7 font-extrabold">Donation Now</button>
+                    <!-- modals structure -->
+
+                    <dialog id="my_modal_1" class="modal text-center">
+                        <div class="modal-box">
+                        <h3 class="text-2xl font-extrabold text-center mb-2">Congrats!</h3>
+                        <img class="mx-auto w-1/4" src="./assets/coin.png" alt="">  
+                        <p>You have donated for humankind <br> <span class="font-bold">succesfully</span></p>
+                          
+                          
+                          <div class="modal-action">
+                            <form method="dialog">
+                              <!-- Close modal button -->
+                              <button class="btn mx-auto">Close Confirmation</button>
+                            </form>
+                          </div>
+                        </div>
+                      </dialog>
+
                     
 
                   </div>
@@ -161,25 +203,43 @@
 
           <!-- * Section-3 || Card -3 -->
 
-          <section class="mb-16">
+          <section class="mb-16 donation-page">
             <!-- Parent Div -->
-             <div class="flex gap-12 border border-spacing-2 justify-between px-20 py-3 rounded-2xl">
+             <div class="lg:flex gap-5 lg:gap-12 border border-spacing-2 justify-between px-5 lg:px-20 py-3 rounded-2xl">
                 <!-- Image div -->
-                 <div id="card-3" class="w-1/2 rounded-2xl p-4">
-                    
+                 <div  class="w-full lg:w-1/2 sm:h-52 lg:h-96   rounded-2xl p-4">
+                    <img class="w-full" src="./assets/quota-protest.png" alt="">
                  </div>
                  <!-- content Div -->
-                  <div class="w-1/2  mt-3 mb-3">
+                  <div class="w-full lg:w-1/2 mt-3 mb-3">
                     <div class="flex gap-1 items-center text-sm font-normal p-2 btnBg w-28 h-11 text-center text-gray-600">
                         <img src="./assets/coin.png" alt="">
                         <span id="quota-fund">2600</span> <span>BDT</span>
                     </div>
 
-                    <span class="text-2xl font-bold mb-10 mt-2">Aid for Injured in the Quota Movement</span>
-                    <p class="text-gray-400 my-6 mb-9 w-2/3  "> The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
+                    <span class="text-lg lg:text-2xl font-bold mb-10 mt-2">Aid for Injured in the Quota Movement</span>
+                    <p class="text-gray-400 my-6 mb-9  lg:w-2/3   "> The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
                     <input id="quota-donation" class="border border-spacing-3 w-2/3 h-5 p-5 mb-9 rounded-2xl" type="text" placeholder="Write down the amount">
                     <br>
                     <button id="btn-quota" class="btn  w-2/3 h-14 color1 text-black rounded-2xl mb-7 font-extrabold">Donation Now</button>
+                    <!-- modals structure -->
+
+                    <dialog id="my_modal_1" class="modal text-center">
+                        <div class="modal-box">
+                        <h3 class="text-2xl font-extrabold text-center mb-2">Congrats!</h3>
+                        <img class="mx-auto w-1/4" src="./assets/coin.png" alt="">  
+                        <p>You have donated for humankind <br> <span class="font-bold">succesfully</span></p>
+                          
+                          
+                          <div class="modal-action">
+                            <form method="dialog">
+                              <!-- Close modal button -->
+                              <button class="btn mx-auto">Close Confirmation</button>
+                            </form>
+                          </div>
+                        </div>
+                      </dialog>
+
                     
 
                   </div>
@@ -187,6 +247,20 @@
         
          </section>
          <!-- * Section-3 Ends -->
+
+         </section>
+
+         
+
+
+         <!-- ! History section starts here -->
+
+         <section id="history-section" class="hidden">
+
+            <h1 class="text-3xl font-extrabold">Donation Log</h1>
+            <div class="divider"></div>
+
+         </section>
 
 
 
