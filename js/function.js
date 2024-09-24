@@ -141,6 +141,7 @@ document.getElementById('show-donation-page')
 .addEventListener('click',function(){
     
     showSectionById('donation-section');
+    changeButtonColor('show-donation-page');
 
 })
 
@@ -150,5 +151,6 @@ document.getElementById('show-history-page')
 .addEventListener('click',function(){
 
     showSectionById('history-section');
+    changeButtonColor('show-history-page');
 
 })
